@@ -43,7 +43,7 @@ export const Route = createRootRoute({
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "https://hrcstudio.com.br/favicon.ico" },
       { rel: "shortcut icon", href: "/favicon.ico" },
     ],
   }),
