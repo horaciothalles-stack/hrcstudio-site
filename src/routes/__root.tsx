@@ -1,5 +1,4 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
 import appCss from "../styles.css?url";
 
 function NotFoundComponent() {
@@ -42,17 +41,15 @@ export const Route = createRootRoute({
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/oEWTvLr2XMZQQqiIMQx3WDgftEW2/social-images/social-1776450447522-Ativo_1.webp" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/oEWTvLr2XMZQQqiIMQx3WDgftEW2/social-images/social-1776450447522-Ativo_1.webp" },
     ],
-   links: [
-  {
-    rel: "stylesheet",
-    href: appCss,
-  },
-  {
-    rel: "icon",
-    href: "/favicon.ico",
-    type: "image/x-icon",
-  },
-],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+  }),
+  shellComponent: RootShell,
+  component: RootComponent,
+  notFoundComponent: NotFoundComponent,
+});
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
