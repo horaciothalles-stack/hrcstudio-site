@@ -49,6 +49,8 @@ export const Route = createRootRoute({
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
+  { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+{ rel: "shortcut icon", href: "/favicon.ico" },
 });
 
 function RootShell({ children }: { children: React.ReactNode }) {
