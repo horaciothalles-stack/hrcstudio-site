@@ -1,9 +1,4 @@
 {
-  "functions": {
-    "dist/server/server.js": {
-      "runtime": "node@20"
-    }
-  },
   "routes": [
     {
       "src": "/assets/(.*)",
