@@ -2,10 +2,11 @@
 @source "../src";
 @import "tw-animate-css";
 
-@import "@fontsource/space-grotesk/400.css";
-@import "@fontsource/space-grotesk/500.css";
-@import "@fontsource/space-grotesk/600.css";
-@import "@fontsource/space-grotesk/700.css";
+/* Instalar antes: bun add @fontsource/spectral @fontsource/dm-sans */
+@import "@fontsource/spectral/400.css";
+@import "@fontsource/spectral/400-italic.css";
+@import "@fontsource/spectral/600.css";
+@import "@fontsource/spectral/700.css";
 @import "@fontsource/dm-sans/400.css";
 @import "@fontsource/dm-sans/500.css";
 @import "@fontsource/dm-sans/600.css";
@@ -20,7 +21,8 @@
   --radius-2xl: calc(var(--radius) + 8px);
   --radius-3xl: calc(var(--radius) + 12px);
 
-  --font-display: "Space Grotesk", system-ui, sans-serif;
+  /* HRC Lab: Spectral para display (autoridade/luxo), DM Sans para corpo (clareza) */
+  --font-display: "Spectral", Georgia, serif;
   --font-sans: "DM Sans", system-ui, sans-serif;
 
   --color-background: var(--background);
@@ -50,56 +52,57 @@
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.125rem; /* bordas retas = padrão premium/editorial */
 
-  /* Brand palette: #F2490C / #F28B0C / #F2B705 / #0D0D0D / #BF244E */
-  --background: oklch(0.145 0.005 30);
-  --foreground: oklch(0.985 0 0);
+  /* HRC Lab Brand Palette: Deep Orange #FF7F00 / Charcoal #0D0D0D */
+  --background: oklch(0.09 0.004 30);       /* #0D0D0D charcoal profundo */
+  --foreground: oklch(0.97 0 0);             /* branco quase puro */
 
-  --surface: oklch(0.19 0.01 30);
-  --surface-elevated: oklch(0.235 0.012 30);
+  --surface: oklch(0.13 0.006 30);           /* superfície levemente elevada */
+  --surface-elevated: oklch(0.17 0.008 30);  /* cards elevados */
 
-  --card: oklch(0.19 0.01 30);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.19 0.01 30);
-  --popover-foreground: oklch(0.985 0 0);
+  --card: oklch(0.13 0.006 30);
+  --card-foreground: oklch(0.97 0 0);
+  --popover: oklch(0.13 0.006 30);
+  --popover-foreground: oklch(0.97 0 0);
 
-  /* Primary — #F2490C laranja vibrante */
-  --primary: oklch(0.635 0.215 36);
-  --primary-foreground: oklch(0.145 0 0);
-  /* Primary glow — #F28B0C âmbar */
-  --primary-glow: oklch(0.72 0.175 56);
+  /* Primary — #FF7F00 Deep Orange (brandbook HRC Lab) */
+  --primary: oklch(0.70 0.195 50);
+  --primary-foreground: oklch(0.09 0 0);
 
-  --secondary: oklch(0.25 0.01 30);
-  --secondary-foreground: oklch(0.985 0 0);
+  /* Primary glow — laranja mais quente para hover */
+  --primary-glow: oklch(0.74 0.185 55);
 
-  --muted: oklch(0.22 0.008 30);
-  --muted-foreground: oklch(0.7 0.015 40);
+  --secondary: oklch(0.18 0.008 30);
+  --secondary-foreground: oklch(0.97 0 0);
 
-  /* Accent — #F2B705 amarelo dourado */
-  --accent: oklch(0.81 0.165 85);
-  --accent-foreground: oklch(0.145 0 0);
+  --muted: oklch(0.16 0.006 30);
+  --muted-foreground: oklch(0.62 0.012 40);
 
-  /* Highlight — #BF244E magenta/rosa profundo */
-  --highlight: oklch(0.52 0.19 8);
-  --highlight-foreground: oklch(0.985 0 0);
+  /* Accent — dourado âmbar para hierarquia secundária */
+  --accent: oklch(0.78 0.16 80);
+  --accent-foreground: oklch(0.09 0 0);
 
-  --destructive: oklch(0.52 0.19 8);
-  --destructive-foreground: oklch(0.985 0 0);
+  /* Highlight — mantido para badges e destaques */
+  --highlight: oklch(0.50 0.17 10);
+  --highlight-foreground: oklch(0.97 0 0);
 
-  --border: oklch(1 0 0 / 8%);
-  --input: oklch(1 0 0 / 12%);
-  --ring: oklch(0.635 0.215 36);
+  --destructive: oklch(0.50 0.17 10);
+  --destructive-foreground: oklch(0.97 0 0);
 
-  /* Gradients & shadows */
-  --gradient-primary: linear-gradient(135deg, oklch(0.635 0.215 36), oklch(0.72 0.175 56), oklch(0.81 0.165 85));
-  --gradient-warm: linear-gradient(135deg, oklch(0.52 0.19 8), oklch(0.635 0.215 36), oklch(0.72 0.175 56));
-  --gradient-radial: radial-gradient(ellipse at top right, oklch(0.635 0.215 36 / 0.3), transparent 60%);
-  --gradient-hero: linear-gradient(180deg, oklch(0.145 0.005 30) 0%, oklch(0.2 0.04 30) 100%);
+  --border: oklch(1 0 0 / 7%);
+  --input: oklch(1 0 0 / 10%);
+  --ring: oklch(0.70 0.195 50);
 
-  --shadow-glow: 0 0 60px oklch(0.635 0.215 36 / 0.4);
-  --shadow-elevated: 0 20px 60px -20px oklch(0 0 0 / 0.7);
-  --shadow-card: 0 8px 32px -8px oklch(0 0 0 / 0.5);
+  /* Gradientes HRC Lab */
+  --gradient-primary: linear-gradient(135deg, oklch(0.70 0.195 50), oklch(0.74 0.185 55));
+  --gradient-warm: linear-gradient(135deg, oklch(0.50 0.17 10), oklch(0.70 0.195 50));
+  --gradient-radial: radial-gradient(ellipse at top right, oklch(0.70 0.195 50 / 0.18), transparent 60%);
+  --gradient-hero: linear-gradient(180deg, oklch(0.09 0.004 30) 0%, oklch(0.13 0.02 30) 100%);
+
+  --shadow-glow: 0 0 48px oklch(0.70 0.195 50 / 0.3);
+  --shadow-elevated: 0 20px 60px -20px oklch(0 0 0 / 0.8);
+  --shadow-card: 0 8px 32px -8px oklch(0 0 0 / 0.6);
 
   --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -121,9 +124,11 @@
     font-feature-settings: "ss01", "cv11";
   }
 
+  /* Spectral para headings: serif editorial = autoridade premium */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.03em;
+    font-weight: 600;
   }
 }
 
@@ -185,8 +190,8 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 30px oklch(0.635 0.215 36 / 0.45); }
-    50% { box-shadow: 0 0 70px oklch(0.72 0.175 56 / 0.7); }
+    0%, 100% { box-shadow: 0 0 30px oklch(0.70 0.195 50 / 0.35); }
+    50% { box-shadow: 0 0 60px oklch(0.74 0.185 55 / 0.55); }
   }
   .animate-pulse-glow {
     animation: pulse-glow 3s ease-in-out infinite;
@@ -200,3 +205,4 @@
     animation: float-slow 8s ease-in-out infinite;
   }
 }
+
