@@ -1,22 +1,43 @@
-const Navbar = () => {
+const Hero = () => {
   return (
-    <nav>
-      <div className="nav-logo">
-        <svg viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <text x="0" y="32" fontFamily="'Inter', sans-serif" fontSize="28" fontWeight="700" fill="white" letterSpacing="2">HRC</text>
-          <text x="88" y="38" fontFamily="'Inter', sans-serif" fontSize="11" fontWeight="400" fill="white" letterSpacing="3">LAB</text>
-          <path d="M8 2 Q18 -4 22 6 Q26 14 16 10 Q26 8 28 18 Q30 26 20 22" stroke="#ff7f00" strokeWidth="1.8" fill="none" strokeLinecap="round" />
-        </svg>
+    <section className="hero">
+      <div className="hero-badge">HRC Lab · Diferente por Design</div>
+
+      <h1>
+        Transformar marcas em<br />
+        <em>ativos financeiros</em>
+        <br />de alto valor.
+      </h1>
+
+      <p className="hero-sub">
+        Nós construímos posicionamento focado em ROI para empresas que querem dominar o mercado Premium e sair da guerra de preços.
+      </p>
+
+      <div className="hero-actions">
+        <a href="#cta" className="btn-primary">Iniciar diagnóstico estratégico →</a>
+        <a href="#solucoes" className="btn-ghost">Ver nosso trabalho</a>
       </div>
-      <ul className="nav-links">
-        <li><a href="#solucoes">Soluções</a></li>
-        <li><a href="#sistemas">Sistemas</a></li>
-        <li><a href="#processo">Processo</a></li>
-        <li><a href="#faq">FAQ</a></li>
-      </ul>
-      <a href="#cta" className="nav-cta">Iniciar diagnóstico</a>
-    </nav>
+
+      <div className="stats-bar">
+        <div className="stat-item">
+          <div className="stat-num">+200</div>
+          <div className="stat-label">Projetos entregues</div>
+        </div>
+        <div className="stat-item">
+          <div className="stat-num">8×</div>
+          <div className="stat-label">Retorno médio</div>
+        </div>
+        <div className="stat-item">
+          <div className="stat-num">+1000</div>
+          <div className="stat-label">Criativos no ecossistema</div>
+        </div>
+        <div className="stat-item">
+          <div className="stat-num">5 anos</div>
+          <div className="stat-label">De experiência comprovada</div>
+        </div>
+      </div>
+    </section>
   );
 };
 
-export default Navbar;
+export default Hero;
