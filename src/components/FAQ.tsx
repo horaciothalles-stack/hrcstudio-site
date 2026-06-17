@@ -3,7 +3,7 @@ import { Plus } from "lucide-react";
 
 const faqs = [
   {
-    q: "Quanto custa contratar a HRC Studio?",
+    q: "Quanto custa contratar a HRC Lab?",
     a: "Os planos variam conforme o escopo (tráfego, social media, branding, etc). Após o diagnóstico gratuito, montamos uma proposta sob medida pra sua realidade.",
   },
   {
