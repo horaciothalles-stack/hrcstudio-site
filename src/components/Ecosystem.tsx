@@ -14,7 +14,7 @@ const systems = [
       { icon: ShieldCheck, text: "Propostas e contratos digitais integrados" },
       { icon: LineChart, text: "Análise de rentabilidade por projeto" },
     ],
-    href: "#",
+    href: "https://frees-io.lovable.app/",
   },
   {
     tag: "Sistema · Negócios",
@@ -28,7 +28,7 @@ const systems = [
       { icon: LineChart, text: "Relatórios financeiros claros e acionáveis" },
       { icon: ShieldCheck, text: "Integração com as principais formas de pagamento" },
     ],
-    href: "#",
+    href: "https://biz-io.lovable.app/",
   },
 ];
 
