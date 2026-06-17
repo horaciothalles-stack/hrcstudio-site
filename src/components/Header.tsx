@@ -5,7 +5,7 @@ import logoMark from "@/assets/logo-mark.png";
 const links = [
   { href: "#servicos", label: "Serviços" },
   { href: "#portfolio", label: "Portfólio" },
-  { href: "#criativos", label: "Criativos" },
+  { href: "#ecossistema", label: "Sistemas" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -28,18 +28,13 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#top" className="flex items-center gap-2.5">
+        <a href="#top" className="flex items-center">
           <img
             src={logoMark}
-            alt="HRC Studio"
-            width={36}
-            height={36}
-            className="h-9 w-9 object-contain"
+            alt="HRC Lab"
+            className="h-9 w-auto object-contain md:h-10"
           />
-          <span className="font-display text-xl font-bold tracking-tight">
-          </span>
         </a>
-
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <a
@@ -51,14 +46,12 @@ export function Header() {
             </a>
           ))}
         </nav>
-
         <a
           href="#contato"
           className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-all hover:bg-primary-glow hover:shadow-glow md:inline-flex"
         >
           Falar com a gente
         </a>
-
         <button
           onClick={() => setOpen(!open)}
           className="md:hidden rounded-md p-2 text-foreground"
@@ -67,7 +60,6 @@ export function Header() {
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
-
       {open && (
         <div className="border-t border-border bg-background/95 backdrop-blur-xl md:hidden">
           <nav className="flex flex-col gap-1 px-6 py-4">
