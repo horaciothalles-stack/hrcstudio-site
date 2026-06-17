@@ -25,13 +25,13 @@ export function Footer() {
           <div>
             <img src={logoFull} alt="HRC Studio" className="h-10 w-auto" />
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
-              Agência de marketing focada em economia de tempo e resultado real.
+              HRC Lab, um ecossistema estratégico.
             </p>
           </div>
 
           <div className="flex items-center gap-3">
             <a
-              href="https://www.instagram.com/hrc.studio"
+              href="https://www.instagram.com/hrclab_"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
@@ -61,7 +61,7 @@ export function Footer() {
         </div>
 
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:items-center">
-          <p>© {new Date().getFullYear()} HRC Studio. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} HRC Lab. Todos os direitos reservados.</p>
           <p>CNPJ 54.124.846/0001-62 · Feito com foco em performance.</p>
         </div>
       </div>
