@@ -1,137 +1,107 @@
 import { motion } from "framer-motion";
-import { ArrowRight, BarChart3, CreditCard, FileText, Smartphone, TrendingUp, Users } from "lucide-react";
+import { ArrowRight, Calculator, LineChart, ShieldCheck, Wallet } from "lucide-react";
 
-const products = [
+const systems = [
   {
-    tag: "Produto · Freelancers & Agências",
+    tag: "Sistema · Freelancers",
     name: "Frees",
-    nameAccent: ".io",
-    subtitle: "Sistema de gestão e precificação estratégica",
+    suffix: ".io",
+    tagline: "Gestão e precificação estratégica para freelancers",
     description:
-      "A ferramenta que faltava para o profissional criativo parar de vender pelo preço errado. Gestão de projetos, precificação inteligente e controle financeiro em uma plataforma construída para quem vive de criar.",
+      "Pare de cobrar por achismo. O Frees.io centraliza sua gestão de projetos e aplica precificação estratégica baseada em valor percebido, para você cobrar o que realmente vale.",
     features: [
-      { icon: TrendingUp, text: "Precificação baseada em valor percebido" },
-      { icon: FileText, text: "Gestão de propostas e contratos" },
-      { icon: BarChart3, text: "Dashboard financeiro em tempo real" },
-      { icon: CreditCard, text: "Integração com ferramentas de pagamento" },
+      { icon: Calculator, text: "Precificação estratégica baseada em valor percebido" },
+      { icon: ShieldCheck, text: "Propostas e contratos digitais integrados" },
+      { icon: LineChart, text: "Análise de rentabilidade por projeto" },
     ],
     href: "#",
-    featured: true,
   },
   {
-    tag: "Produto · Autônomos & Comércio",
+    tag: "Sistema · Negócios",
     name: "Biz",
-    nameAccent: ".io",
-    subtitle: "Sistema de caixa e gestão para negócios",
+    suffix: ".io",
+    tagline: "Caixa e gestão para autônomos, lojas e profissionais independentes",
     description:
-      "Controle financeiro completo para autônomos, lojas e profissionais independentes que querem operar com clareza e crescer com consistência. Simples de usar, poderoso nos resultados.",
+      "Seu negócio já é Premium, sua gestão também deveria ser. O Biz.io organiza fluxo de caixa, histórico de clientes e relatórios financeiros que você entende de verdade.",
     features: [
-      { icon: BarChart3, text: "Fluxo de caixa e controle de entradas/saídas" },
-      { icon: Users, text: "Gestão de clientes e cobranças" },
-      { icon: TrendingUp, text: "Relatórios de performance do negócio" },
-      { icon: Smartphone, text: "Acesso via mobile e desktop" },
+      { icon: Wallet, text: "Controle de caixa em tempo real" },
+      { icon: LineChart, text: "Relatórios financeiros claros e acionáveis" },
+      { icon: ShieldCheck, text: "Integração com as principais formas de pagamento" },
     ],
     href: "#",
-    featured: false,
   },
 ];
 
 export function Ecosystem() {
   return (
-    <section className="relative overflow-hidden bg-surface py-24 lg:py-32">
-      {/* Linha laranja sutil no topo da seção */}
-      <div className="absolute inset-x-0 top-0 h-px bg-primary/30" />
+    <section id="ecossistema" className="relative py-24 lg:py-32">
+      <div className="absolute inset-0 -z-10 bg-gradient-radial opacity-50" />
 
-      <div className="mx-auto max-w-6xl px-6 lg:px-10">
-        {/* Header da seção */}
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20 mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              O Ecossistema HRC Lab
-            </p>
-            <h2 className="font-display text-4xl font-bold leading-tight tracking-tight md:text-5xl">
-              Ferramentas inteligentes que{" "}
-              <span className="italic text-primary">elevam o padrão</span>{" "}
-              da profissão.
-            </h2>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.15 }}
-            className="flex items-center"
-          >
-            <p className="text-base text-muted-foreground leading-relaxed font-light">
-              Não somos apenas uma agência de comunicação. Desenvolvemos soluções
-              tecnológicas que capacitam profissionais e negócios a operarem com mais
-              inteligência, eficiência e autoridade — criando ferramentas que elevam o
-              padrão da profissão.
-            </p>
-          </motion.div>
+      <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            O Ecossistema HRC Lab
+          </span>
+          <h2 className="mt-4 font-display text-4xl font-bold leading-tight md:text-5xl">
+            Não somos só uma agência.{" "}
+            <span className="text-gradient">Somos desenvolvedores</span> de soluções inteligentes.
+          </h2>
+          <p className="mt-4 text-muted-foreground">
+            Criamos sistemas que elevam o padrão da profissão e fazem o trabalho
+            pesado da gestão por você, para sua marca focar em crescer.
+          </p>
         </div>
 
-        {/* Cards dos produtos */}
-        <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-2">
-          {products.map((product, i) => (
+        <div className="mt-16 grid gap-6 lg:grid-cols-2">
+          {systems.map((system, i) => (
             <motion.div
-              key={product.name}
-              initial={{ opacity: 0, y: 24 }}
+              key={system.name}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="relative bg-background p-10 lg:p-12 group"
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              className="group relative overflow-hidden rounded-3xl border border-border bg-surface/50 p-8 backdrop-blur transition-colors hover:bg-surface md:p-10"
             >
-              {/* Linha laranja no topo apenas do card em destaque */}
-              {product.featured && (
-                <div className="absolute inset-x-0 top-0 h-[2px] bg-primary" />
-              )}
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
 
-              {/* Tag do segmento */}
-              <p className="mb-6 text-[10px] font-semibold uppercase tracking-[0.2em] text-primary">
-                {product.tag}
+              <span className="inline-block rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-primary">
+                {system.tag}
+              </span>
+
+              <div className="mt-5 font-display text-4xl font-bold leading-none">
+                {system.name}
+                <span className="text-primary">{system.suffix}</span>
+              </div>
+              <p className="mt-2 text-sm text-muted-foreground">{system.tagline}</p>
+
+              <p className="mt-6 text-sm leading-relaxed text-foreground/80">
+                {system.description}
               </p>
 
-              {/* Nome do produto */}
-              <h3 className="font-display text-4xl font-bold tracking-tight leading-none mb-1">
-                {product.name}
-                <span className="text-primary">{product.nameAccent}</span>
-              </h3>
-              <p className="text-xs text-muted-foreground tracking-wide mb-7">
-                {product.subtitle}
-              </p>
-
-              {/* Descrição */}
-              <p className="text-sm text-muted-foreground leading-relaxed font-light mb-9">
-                {product.description}
-              </p>
-
-              {/* Features */}
-              <ul className="mb-10 space-y-0 divide-y divide-border">
-                {product.features.map(({ icon: Icon, text }) => (
-                  <li key={text} className="flex items-center gap-3 py-3">
-                    <div className="flex h-6 w-6 flex-shrink-0 items-center justify-center">
-                      <div className="h-1.5 w-1.5 rounded-full bg-primary" />
-                    </div>
-                    <span className="text-sm text-muted-foreground">{text}</span>
+              <ul className="mt-7 space-y-3">
+                {system.features.map((f) => (
+                  <li key={f.text} className="flex items-start gap-3 text-sm">
+                    <f.icon size={16} className="mt-0.5 shrink-0 text-primary" />
+                    <span className="text-foreground/90">{f.text}</span>
                   </li>
                 ))}
               </ul>
 
-              {/* CTA */}
               <a
-                href={product.href}
-                className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-primary transition-gap group-hover:gap-3"
+                href={system.href}
+                className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-opacity hover:opacity-75"
               >
-                Conhecer o {product.name}{product.nameAccent}
+                Conhecer o {system.name}
+                {system.suffix}
                 <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
               </a>
+
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -bottom-6 -right-2 select-none font-display text-[7rem] font-bold leading-none text-primary/[0.04]"
+              >
+                {String(i + 1).padStart(2, "0")}
+              </div>
             </motion.div>
           ))}
         </div>
