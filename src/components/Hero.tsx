@@ -42,7 +42,7 @@ export function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="mx-auto mt-6 max-w-2xl text-base text-muted-foreground md:text-lg"
         >
-          A HRC Studio cuida da estratégia, criação e tráfego da sua marca para você
+          A HRC Lab cuida da estratégia, criação e tráfego da sua marca para você
           focar no que importa: <span className="text-foreground">crescer</span>. Performance
           comprovada, criatividade premium e zero retrabalho.
         </motion.p>
