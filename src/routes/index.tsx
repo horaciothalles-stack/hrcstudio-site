@@ -5,7 +5,7 @@ import { Pains } from "@/components/Pains";
 import { Services } from "@/components/Services";
 import { Process } from "@/components/Process";
 import { Portfolio } from "@/components/Portfolio";
-import { Creatives } from "@/components/Creatives";
+import { Ecosystem } from "@/components/Ecosystem";
 import { FAQ } from "@/components/FAQ";
 import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
@@ -13,17 +13,17 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "HRC Studio — Agência de marketing focada em resultado" },
+      { title: "HRC Lab — Diferente por Design. Premium por Natureza." },
       {
         name: "description",
         content:
-          "Estratégia, criação e tráfego para sua marca economizar tempo e multiplicar resultado. +200 marcas atendidas, +1000 criativos premium.",
+          "Transformamos marcas em ativos financeiros de alto valor. Estratégia, criação e ecossistema de sistemas inteligentes para o mercado Premium.",
       },
-      { property: "og:title", content: "HRC Studio — Marketing focado em resultado" },
+      { property: "og:title", content: "HRC Lab — Diferente por Design. Premium por Natureza." },
       {
         property: "og:description",
         content:
-          "Agência full-service: tráfego, branding, conteúdo e criativos premium prontos pra escalar sua marca.",
+          "Agência e laboratório de soluções: estratégia de marca, tráfego, branding e os sistemas Frees.io e Biz.io.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -41,7 +41,7 @@ function Index() {
         <Services />
         <Process />
         <Portfolio />
-        <Creatives />
+        <Ecosystem />
         <FAQ />
         <CTA />
       </main>
