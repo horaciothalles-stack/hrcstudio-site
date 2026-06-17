@@ -74,10 +74,10 @@ export function Hero() {
           className="mx-auto mt-20 grid max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-border bg-border md:grid-cols-4"
         >
           {[
-            { v: "+200", l: "Marcas atendidas" },
+            { v: "+50", l: "Marcas atendidas" },
             { v: "8x", l: "ROAS médio" },
-            { v: "+1000", l: "Criativos premium" },
-            { v: "5 anos", l: "De mercado" },
+            { v: "SaaS", l: "Sistemas de Solução" },
+            { v: "+6 anos", l: "De mercado" },
           ].map((s) => (
             <div key={s.l} className="bg-background px-4 py-6">
               <div className="font-display text-3xl font-bold text-foreground">{s.v}</div>
