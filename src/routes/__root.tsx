@@ -1,5 +1,6 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import appCss from "../styles.css?url";
+import ogImage from "@/assets/og-image.png";
 
 function NotFoundComponent() {
   return (
@@ -28,23 +29,37 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "HRC Studio" },
-      { name: "description", content: "HRC Studio Hub is a marketing agency landing page showcasing services, portfolio, and a premium creative asset package." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "HRC Studio" },
-      { property: "og:description", content: "HRC Studio Hub is a marketing agency landing page showcasing services, portfolio, and a premium creative asset package." },
+      { title: "HRC Lab — Diferente por Design. Premium por Natureza." },
+      {
+        name: "description",
+        content:
+          "Transformamos marcas em ativos financeiros de alto valor. Estratégia de marca, tráfego e sistemas inteligentes para o mercado Premium.",
+      },
+      { property: "og:title", content: "HRC Lab — Diferente por Design. Premium por Natureza." },
+      {
+        property: "og:description",
+        content:
+          "Transformamos marcas em ativos financeiros de alto valor. Estratégia de marca, tráfego e sistemas inteligentes para o mercado Premium.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "HRC Studio" },
-      { name: "twitter:description", content: "HRC Studio Hub is a marketing agency landing page showcasing services, portfolio, and a premium creative asset package." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/oEWTvLr2XMZQQqiIMQx3WDgftEW2/social-images/social-1776450447522-Ativo_1.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/oEWTvLr2XMZQQqiIMQx3WDgftEW2/social-images/social-1776450447522-Ativo_1.webp" },
+      { property: "og:url", content: "https://hrcstudio.com.br" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "HRC Lab — Diferente por Design. Premium por Natureza." },
+      {
+        name: "twitter:description",
+        content:
+          "Transformamos marcas em ativos financeiros de alto valor. Estratégia de marca, tráfego e sistemas inteligentes para o mercado Premium.",
+      },
+      { property: "og:image", content: ogImage },
+      { name: "twitter:image", content: ogImage },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "https://hrcstudio.com.br/favicon.ico" },
+      { rel: "icon", href: "/favicon.ico" },
       { rel: "shortcut icon", href: "/favicon.ico" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/favicon-180.png" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+      { rel: "icon", type: "image/png", sizes: "16x16", href: "/favicon-16.png" },
     ],
   }),
   shellComponent: RootShell,
@@ -54,7 +69,7 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
